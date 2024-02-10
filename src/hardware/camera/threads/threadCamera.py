@@ -29,7 +29,9 @@ import cv2
 import threading
 import base64
 import time
-import pyzed.sl as sl
+
+import pyzed.camera as zcam
+import pyzed.defines as sl
 
 
 
@@ -190,6 +192,7 @@ class threadCamera(ThreadWithStop):
     def _init_camera(self):
         """This function will initialize the camera object. It will make this camera object have two chanels "lore" and "main"."""
             # Init ZED camera
+    # Init ZED camera
         init_params = zcam.PyInitParameters()
         init_params.camera_resolution = sl.PyRESOLUTION.RESOLUTION_HD1080  # Main resolution
         init_params.depth_mode = sl.PyDEPTH_MODE.DEPTH_MODE_PERFORMANCE
@@ -209,7 +212,7 @@ class threadCamera(ThreadWithStop):
         runtime_params = zcam.PyRuntimeParameters()
         runtime_params.sensing_mode = sl.PySENSING_MODE.SENSING_MODE_STANDARD
         self.zed.start(runtime_params)
-        
+            
         
         
         # self.camera = picamera2.Picamera2()
