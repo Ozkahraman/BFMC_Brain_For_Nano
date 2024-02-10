@@ -29,8 +29,7 @@ import cv2
 import threading
 import base64
 import time
-import pyzed.defines as sl
-import pyzed.camera as zcam
+import pyzed.sl as sl
 
 
 
