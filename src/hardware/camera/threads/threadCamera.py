@@ -29,8 +29,9 @@ import cv2
 import threading
 import base64
 import time
-import pyzed.camera as zcam
 import pyzed.defines as sl
+import pyzed.camera as zcam
+
 
 
 from multiprocessing import Pipe
